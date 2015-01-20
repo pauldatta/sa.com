@@ -10820,6 +10820,37 @@ body {
   font-size: 30px;
   color: #8E8E8C;
 }
+body.t1 .bg {
+  background: url(../images/2.jpg) no-repeat right bottom;
+  background-size: cover;
+}
+body.t1 .bg:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+}
+body.t1 .bg img {
+  display: none;
+}
+body.t1 .content {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  color: #fff;
+}
+body.t1 .content h1 {
+  color: #fff;
+}
+body.t1 .content p {
+  color: #ddd;
+}
+body.t1 .social-icons li a {
+  color: #ddd;
+}
 @media (max-width: 992px) {
   .content {
     position: absolute;

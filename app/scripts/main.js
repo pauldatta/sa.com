@@ -4,8 +4,28 @@
   ws = window.ws || {};
 
   ws = (function() {
+    var _getUrlParameter;
+    _getUrlParameter = function(sParam) {
+      var i, sPageURL, sParameterName, sURLVariables;
+      sPageURL = window.location.search.substring(1);
+      sURLVariables = sPageURL.split('&');
+      i = 0;
+      while (i < sURLVariables.length) {
+        sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] === sParam) {
+          return sParameterName[1];
+        }
+        i++;
+      }
+    };
     return {
-      init: function() {}
+      init: function() {
+        var t;
+        t = _getUrlParameter('t');
+        if (t === 't1') {
+          return $('body').addClass('t1');
+        }
+      }
     };
   })();
 
