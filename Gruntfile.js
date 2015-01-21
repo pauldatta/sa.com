@@ -30,7 +30,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:pauldatta/sa.com.git',
+          remote: 'git@github.com:websiddu/sa.com.git',
           branch: 'gh-pages'
         }
       }
