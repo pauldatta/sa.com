@@ -2,6 +2,7 @@ ws = window.ws || {}
 
 ws = do ->
 
+  # Helper I can use later
   _getUrlParameter = (sParam) ->
     sPageURL = window.location.search.substring(1);
     sURLVariables = sPageURL.split('&');
@@ -13,9 +14,7 @@ ws = do ->
       i++
 
   init: ->
-    t = _getUrlParameter('t')
-    if(t is 't1')
-      $('body').addClass('t1')
-
-
+    $('#dreamer').on "click", -> 
+      $('body').toggleClass('t1')
+# Init
 $(ws.init)

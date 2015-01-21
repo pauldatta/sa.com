@@ -20,11 +20,9 @@
     };
     return {
       init: function() {
-        var t;
-        t = _getUrlParameter('t');
-        if (t === 't1') {
-          return $('body').addClass('t1');
-        }
+        return $('#dreamer').on("click", function() {
+          return $('body').toggleClass('t1');
+        });
       }
     };
   })();
